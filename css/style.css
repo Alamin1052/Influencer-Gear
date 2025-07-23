@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0px;
+}
+
+:root{
+    --primary-color: #3A3A3A;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+}
+
+/* shared style */
+
+.display{
+    display: flex;
+}
+
+.btn{
+    background-color: #E02C6D;
+    color: white;
+    padding: 10px 24px;
+    border-radius: 40px;
+    border: none;
+}
+
+/* header style */
+
+header{
+    max-width: 85%;
+    margin: 0 auto;
+}
+/* nav style */
+
+.nav{
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.nav-content{
+    gap: 40px;
+}
+
+.nav-content li{
+    list-style: none;
+}
+
+.nav-content li a{
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+/* banner style */
+
+.banner{
+    margin-top: 50px ;
+    margin-bottom: 100px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 130px;
+}
+
+.banner-text{
+    max-width: 50%;
+}
+
+.banner-heading{
+    font-size: 3.25rem;
+    color: var(--primary-color);
+}
+
+.banner-discription{
+    font-size: 1rem;
+    color: var(--primary-color);
+    margin: 20px 0px;
+}
+
+.banner-img{
+    background-image: url(/images/Circle\ design.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    max-width: 100%;
+    padding-bottom: 20px;
+}
+
+.banner-img img{
+    max-width: 100%;
+}
+
+/* main style */
+
+main{
+    max-width: 80%;
+    margin: 0px auto;
+}
+
+/* company logo style */
+
+.company-logo{
+    margin: 0px auto;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 30px 0;
+    background: #fff;
+    position: relative;
+    flex-wrap: wrap;
+
+}
+
+.company-logo::before,
+.company-logo::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 1.5px;
+    z-index: 1;
+}
+
+.company-logo::before {
+  top: 0;
+  background: linear-gradient(to right, #C0CCDA10, #C0CCDA60, #C0CCDA10 );
+}
+
+.company-logo::after {
+  bottom: 0;
+  background: linear-gradient(to right, #C0CCDA10, #C0CCDA60, #C0CCDA10 );
+}
+
+/* Products style */
+
+.products-container{
+    margin: 100px 0px ;
+}
+
+.product-heading{
+    text-align: center;
+    color: #3A3A3A ;
+    font-size: 1.75rem ;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.product-card{
+    margin: 0px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.card{
+    padding: 15px;
+    box-shadow: 0px 0px 40px #00000015;
+    border-radius: 5px;
+}
+
+.product-img{
+    width: 100%;
+}
+
+.card-title{
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #18191F ;
+}
+
+.card-price{
+    color: #00000087;
+    font-size: 1.5rem;
+}
+
+.rating-text{
+    color: #5E6366;
+    font-size: 0.98rem;
+}
+
+.card-discription{
+    color: #787885;
+    font-size: 0.95rem;
+}
+
+.rating{
+    display: flex;
+    gap: 10px;
+}
+
+/* responsive style */
+
+/* mobile device */
+
+@media screen and (max-width: 576px) {
+    
+    .nav, .nav-content{
+        flex-direction: column;
+    }
+    .nav{
+        max-width: 95%;
+        text-align: center;
+    }
+
+    .nav-content {
+        padding: 0px;
+        margin-top: 30px;
+    }
+
+    .banner{
+        flex-direction: column-reverse;
+    }
+
+    .banner-heading{
+        font-size: 2rem;
+    }
+
+    .banner-text{
+        max-width: 95%;
+        text-align: center;
+    }
+
+    .product-card{
+    grid-template-columns: repeat(1, 1fr);
+    }
+
+}
+/* tablet device */
+
+@media screen and (min-width:576px) and (max-width: 992px) {
+    .nav{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-content{
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .banner{
+        flex-direction: column-reverse;
+    }
+
+    .banner-text{
+        max-width: 95%;
+        text-align: center;
+    }
+
+    .banner-heading{
+        font-size: 2.5rem;
+    }
+
+    .product-card{
+    grid-template-columns: repeat(2, 1fr);
+    }
+    
+}
